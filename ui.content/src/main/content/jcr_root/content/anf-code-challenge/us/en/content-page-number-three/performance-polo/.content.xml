@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-04-03T10:26:28.250-04:00"
+        cq:lastModifiedBy="abercrombie"
+        cq:template="/conf/anf-code-challenge/settings/wcm/templates/page-content"
+        jcr:description=" Our new short-sleeve polo in our lightweight performance fabric, that's breathable and super soft, with 4-way stretch, UV protection and moisture-wicking properties. Features a classic collar and three-button placket. Designed to keep you comfortable on the hottest days on the course! Imported."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Performance Polo"
+        sling:resourceType="anf-code-challenge/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="anf-code-challenge/components/container">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="anf-code-challenge/components/container">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="anf-code-challenge/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="anf-code-challenge/components/container"
+                    layout="responsiveGrid"/>
+            </container>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/anf-code-challenge/KIC_124-3329-8711-908_prod1.avif"/>
+    </jcr:content>
+</jcr:root>

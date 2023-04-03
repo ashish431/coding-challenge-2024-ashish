@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="{Name}rep:User"
+    jcr:mixinTypes="{Name}[rep:AccessControllable]"
+    jcr:uuid="3bb9a59a-cff6-3cc8-8d1a-18e6ce699591"
+    rep:authorizableId="abercrombie"
+    rep:principalName="abercrombie"
+    rep:password="\{SHA-256}f869c2c1a03bf03d-1000-799ae5ba4d180865e37f8cd8d45462f5bf827be02223335ecf5e9d275f0d0ad2">
+    <profile
+        sling:resourceType="cq/security/components/profile"
+        jcr:primaryType="{Name}nt:unstructured"
+        familyName="crombie"
+        givenName="aber"/>
+    <rep:policy jcr:primaryType="{Name}rep:ACL">
+        <allow
+            jcr:primaryType="{Name}rep:GrantACE"
+            rep:principalName="abercrombie"
+            rep:privileges="{Name}[jcr:all]"/>
+    </rep:policy>
+</jcr:root>
