@@ -19,7 +19,7 @@
 
 ## Exercise 2
 
-1.	Create a servlet that will output – in JSON format – the first and last name of the author who last modified the targeted page.
+1.	Create a servlet that will output the first and last name of the author who last modified the targeted page.
 2.	It will also contain a list of any child pages that were also modified by this user.
 3.	Based on the extension, the servlet should return the output in either XML or JSON format
 4.	Provide unit tests with at least 80% test coverage.
