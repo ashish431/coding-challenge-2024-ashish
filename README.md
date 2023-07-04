@@ -31,7 +31,7 @@
 2.	The label for the input and the text of the submit button must be authorable.
 3.	On desktop, the component should have a light grey background and black text.
 4.	On mobile, the component should have a black background with white text.
-5.	When the submit button is click, the component should display the title, description, image, and last modified date for each component whose title or description contain the text from the input field.
+5.	When the submit button is click, the component should display the title, description, image, and last modified date for each page whose title or description contain the text from the input field.
 6.	If no pages are returned, it should instead display text alerting the user that their term returned zero results.
 7.	Provide unit tests with at least 80% test coverage.
 
