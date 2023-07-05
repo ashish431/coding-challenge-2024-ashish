@@ -14,14 +14,18 @@
 1.	Create a service that will run once every 2 minutes and only on the author environment.
 2.	This service will find all pages that have been published and will set a property named `processedDate` to the current time.
 3.	Provide unit tests with at least 80% test coverage.
+    * Check the generated JaCoCo report to view the test coverage.
+    * This report is viewable at `core/target/site/jacoco/index.html`
 
 
 ## Exercise 2
 
 1.	Create a servlet that will output – in JSON format – the first and last name of the author who last modified the targeted page.
 2.	It will also contain a list of any child pages that were also modified by this user.
-3.	Based on the extension, the servlet should return the output in either XML or JSON format
+3.	Based on the extension, the servlet should return the output in either XML or JSON format.
 4.	Provide unit tests with at least 80% test coverage.
+    * Check the generated JaCoCo report to view the test coverage.
+    * This report is viewable at `core/target/site/jacoco/index.html`
 
 
 ## Exercise 3
@@ -33,6 +37,8 @@
 5.	When the submit button is click, the component should display the title, description, image, and last modified date for each component whose title or description contain the text from the input field.
 6.	If no pages are returned, it should instead display text alerting the user that their term returned zero results.
 7.	Provide unit tests with at least 80% test coverage.
+    * Check the generated JaCoCo report to view the test coverage.
+    * This report is viewable at `core/target/site/jacoco/index.html`
 
 
 ## Starting AEM
