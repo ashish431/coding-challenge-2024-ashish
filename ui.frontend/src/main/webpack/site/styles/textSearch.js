@@ -10,7 +10,7 @@ $(document).ready(function() {
                     var results = response;
 
                     if (results.length === 0 || results[0].message) {
-                        $('#searchResults').append('<p>No results found.</p>');
+                        $('#searchResults').append('<p>No results found for your search term.</p>');
                     } else {
                         $.each(results, function(index, result) {
                             var resultHTML = '<div class="result-item">' +
