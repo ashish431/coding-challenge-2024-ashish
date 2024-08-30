@@ -1,0 +1,22 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="cmp-textSearch" 
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.inputTextLabel && properties.submitButtonLabel}">
+
+    <div class="textSearch-field">
+        <label for="inputLabel">${properties.inputTextLabel}</label>
+          <input type="text" id="searchInputLabel" name="inputLabel"><br><br>
+    </div>
+
+    <div class="textSearch-actions">
+        <input type="submit" value="${properties.submitButtonLabel}">
+
+    </div>
+
+    <!-- Container to display the search results -->
+    <div id="searchResults"></div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasContent}"></sly>
+

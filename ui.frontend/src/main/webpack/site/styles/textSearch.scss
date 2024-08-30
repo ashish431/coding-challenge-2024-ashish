@@ -1,0 +1,99 @@
+// Variables for common colors
+$background-color-desktop: lightgrey;
+$text-color-desktop: black;
+$background-color-mobile: black;
+$text-color-mobile: white;
+$button-bg-color: #0073e6;
+$button-hover-bg-color: #005bb5;
+$input-border-color: #ccc;
+$input-border-color-mobile: #fff;
+
+// Mixin for input styling
+@mixin input-style {
+  width: -webkit-fill-available;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid $input-border-color;
+}
+
+// Default Styles (Desktop)
+.cmp-textSearch {
+  background-color: $background-color-desktop;
+  color: $text-color-desktop;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .textSearch-field,
+  .textSearch-actions {
+    margin-bottom: 15px;
+  }
+
+  .textSearch-field {
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"] {
+      @include input-style;
+    }
+  }
+
+  .textSearch-actions {
+    input[type="submit"] {
+      background-color: $button-bg-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: $button-hover-bg-color;
+      }
+    }
+  }
+}
+
+// Mobile Styles
+@media (max-width: 767px) {
+  .cmp-textSearch {
+    background-color: $background-color-mobile;
+    color: $text-color-mobile;
+    padding: 15px;
+
+    .textSearch-field {
+      label {
+        color: $text-color-mobile; // Ensure label text is white on black background
+      }
+
+      input[type="text"] {
+        background-color: white; // White background for input field to maintain readability
+        color: black;
+        padding: 10px;
+        border: 1px solid $input-border-color-mobile;
+        border-radius: 4px;
+      }
+    }
+
+    .textSearch-actions {
+      input[type="submit"] {
+        background-color: $button-bg-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.result-item {
+  margin-bottom: 20px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
