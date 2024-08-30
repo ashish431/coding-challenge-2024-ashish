@@ -33,9 +33,6 @@ import java.util.Map;
 
 public class SearchServlet extends SlingAllMethodsServlet {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	@Reference
     private QueryBuilder queryBuilder;
@@ -53,9 +50,9 @@ public class SearchServlet extends SlingAllMethodsServlet {
         Session session = resourceResolver.adaptTo(Session.class);
 
         Map<String, String> queryMap = new HashMap<>();
-        queryMap.put("path", "/content"); // Set your content path here
+        queryMap.put("path", "/content");
         queryMap.put("type", "cq:Page");
-        queryMap.put("group.p.or", "true"); // Enable OR condition between predicates
+        queryMap.put("group.p.or", "true");
         queryMap.put("group.1_property", "jcr:content/jcr:title");
         queryMap.put("group.1_property.operation", "like");
         queryMap.put("group.1_property.value", "%" + searchTerm + "%");
