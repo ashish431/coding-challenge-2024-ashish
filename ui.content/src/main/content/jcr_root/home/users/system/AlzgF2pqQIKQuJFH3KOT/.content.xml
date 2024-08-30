@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="fd1c181d-21f9-3599-884d-ff93a49cb5d0"
+    rep:authorizableId="system-user-writer"
+    rep:principalName="system-user-writer"
+    familyName="Writer"
+    givenName="User"/>
