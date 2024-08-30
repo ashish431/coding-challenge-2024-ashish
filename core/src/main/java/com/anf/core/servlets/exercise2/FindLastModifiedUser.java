@@ -64,7 +64,7 @@ public class FindLastModifiedUser extends SlingSafeMethodsServlet {
 			return;
 		}
 
-		//String lastModifiedBy = page.getProperties().get("jcr:lastModifiedBy", String.class);
+		//String lastModifiedBy = page.getProperties().get("cq:lastModifiedBy", String.class);
 		String lastModifiedBy = getLastModifiedBy(page);
 
 		if (lastModifiedBy == null || lastModifiedBy.isEmpty()) {
@@ -94,7 +94,7 @@ public class FindLastModifiedUser extends SlingSafeMethodsServlet {
 			LOG.error("Error fetching user information: ", e);
 		}
 
-		// Fetch child pages modified by the same author
+		// Fetching child pages modified by the same author
 		List<String> childPages = getChildPagesModifiedByAuthor(page, lastModifiedBy);
 
 		String extension = request.getRequestPathInfo().getExtension();
@@ -111,8 +111,7 @@ public class FindLastModifiedUser extends SlingSafeMethodsServlet {
 
 	private List<String> getChildPagesModifiedByAuthor(Page parentPage, String authorId) {
 	    List<String> childPages = new ArrayList<>();
-	    
-	    // Use an iterator to iterate over the child pages
+
 	    Iterator<Page> childPagesIterator = parentPage.listChildren();
 	    while (childPagesIterator.hasNext()) {
 	        Page child = childPagesIterator.next();
@@ -160,7 +159,7 @@ public class FindLastModifiedUser extends SlingSafeMethodsServlet {
 		return xmlResponse.toString();
 	}
 	private String getLastModifiedBy(Page page) {
-	    Resource contentResource = page.getContentResource(); // Get the jcr:content node
+	    Resource contentResource = page.getContentResource(); // Getting the jcr:content node
 	    if (contentResource != null) {
 	        ValueMap properties = contentResource.getValueMap();
 	        return properties.get("cq:lastModifiedBy", String.class);
