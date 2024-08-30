@@ -50,7 +50,7 @@ public class SearchServlet extends SlingAllMethodsServlet {
         Session session = resourceResolver.adaptTo(Session.class);
 
         Map<String, String> queryMap = new HashMap<>();
-        queryMap.put("path", "/content");
+        queryMap.put("path", "/content/anf-code-challenge");
         queryMap.put("type", "cq:Page");
         queryMap.put("group.p.or", "true");
         queryMap.put("group.1_property", "jcr:content/jcr:title");
