@@ -1,4 +1,4 @@
-package com.anf.core.servlets.excercise3;
+package com.anf.core.servlets.exercise3;
 
 import javax.servlet.Servlet;
 
